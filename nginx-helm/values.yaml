@@ -1,6 +1,6 @@
 replicaCount: 2
 image:
-  repository: nginx
+  repository: ngin
   tag: stable
 service:
   type: ClusterIP
