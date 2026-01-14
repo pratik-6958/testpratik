@@ -12,10 +12,6 @@ spec:
       labels:
         app: {{ include "nginx-helm.name" . }}
     spec:
- 
-
-
-
       containers:
         - name: nginx
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
