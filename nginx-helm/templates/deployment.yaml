@@ -16,7 +16,7 @@ spec:
         # Spread across Availability Zones
         - maxSkew: 1
           topologyKey: topology.kubernetes.io/zone
-          whenUnsatisfiable: DoNotSchedule
+          whenUnsatisfiable: ScheduleAnyWay
           labelSelector:
             matchLabels:
               app: {{ include "nginx-helm.name" . }}
