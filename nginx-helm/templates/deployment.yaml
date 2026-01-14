@@ -21,13 +21,7 @@ spec:
             matchLabels:
               app: {{ include "nginx-helm.name" . }}
 
-        # Spread across Nodes
-        - maxSkew: 1
-          topologyKey: kubernetes.io/hostname
-          whenUnsatisfiable: ScheduleAnyway
-          labelSelector:
-            matchLabels:
-              app: {{ include "nginx-helm.name" . }}
+
 
       containers:
         - name: nginx
