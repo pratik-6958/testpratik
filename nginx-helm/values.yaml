@@ -1,7 +1,7 @@
 replicaCount: 2
 
 image:
-  repository: pratik6958/myapp
+  repository: pratik6958/myapp:v.1.0
   tag: v1.0
 
 service:
