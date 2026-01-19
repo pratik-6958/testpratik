@@ -1,0 +1,20 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: myapp-vs
+spec:
+  hosts:
+  - myapp.example.com
+  gateways:
+  - istio-system/istio-ingressgateway
+  http:
+  - name: primary
+    route:
+    - destination:
+        host: myapp-stable.default.svc.cluster.local
+        subset: stable
+      weight: 100
+    - destination:
+        host: myapp-stable.default.svc.cluster.local
+        subset: canary
+      weight: 0
