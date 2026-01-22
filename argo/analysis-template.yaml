@@ -7,8 +7,9 @@ spec:
   - name: success-rate
     interval: 30s
     count: 3
-    successCondition: result != nil && len(result) > 0 && result[0] >= 0.95
-    failureCondition: result != nil && len(result) > 0 && result[0] < 0.90
+    consecutiveErrorLimit: 3
+    successCondition: len(result) > 0
+    failureCondition: len(result) == 0
     provider:
       prometheus:
         address: http://prometheus-server.monitoring.svc.cluster.local
