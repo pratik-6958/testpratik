@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/yourusername/sample-ml-monitoring.git'
+                git 'https://github.com/pratik-6958/testpratik.git'
             }
         }
 
