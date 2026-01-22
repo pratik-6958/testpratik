@@ -25,6 +25,6 @@ spec:
     spec:
       containers:
       - name: demo-app
-        image: pratik6958/ec2-ai-dashboard:latest
+        image: pratik6958/newapp:v.1
         ports:
         - containerPort: 80
