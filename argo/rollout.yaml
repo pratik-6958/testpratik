@@ -25,6 +25,6 @@ spec:
     spec:
       containers:
       - name: demo-app
-        image: nginx:latest
+        image: pratik6958/ec2-ai-dashboard:latest
         ports:
         - containerPort: 80
