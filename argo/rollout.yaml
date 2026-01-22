@@ -12,9 +12,7 @@ spec:
       - setWeight: 50
       - pause: { duration: 60 }
       - setWeight: 100
-      analysis:
-        templates:
-        - templateName: success-rate
+
   selector:
     matchLabels:
       app: demo-app
